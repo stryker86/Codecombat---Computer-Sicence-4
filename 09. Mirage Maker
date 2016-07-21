@@ -1,0 +1,33 @@
+// While your gold is less than 25, collect coins.
+// Then, build a decoy at the white X to lure the brawlers away.
+// While your health is full, yell insults at the smaller ogres to provoke them.
+// Then retreat back to your base to ambush them.
+
+var coins = hero.findItems();
+var coinIndex = 0;
+
+if(coins){
+    while(coinIndex < coins.length) {
+    var coin = coins[coinIndex];
+    hero.moveXY(coin.pos.x, coin.pos.y);
+    coinIndex += 1;
+  // I have an error here. When the hero has 24 in gold he starts to run around without collecting items for a few seconds then collects another coin
+  and then another utill it has 26. After this he goes and builds the trap. I think that this error comes from the game platform but I'm not sure.
+        
+}
+if(hero.gold>=25){
+    hero.buildXY("decoy", 72, 68);
+    }
+  while(hero.health > 650){
+           hero.say("Come here Ogre");
+           }
+hero.moveXY(22, 15); 
+
+    }
+//I'm not sure if for the last part I used the correct code, maybe I should of created a separate variable to hold the current
+health of the hero instead just using and number. But anyway the code works.
+     
+          
+           
+    
+    
