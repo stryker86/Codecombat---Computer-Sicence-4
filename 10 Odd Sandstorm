@@ -1,0 +1,17 @@
+// This array contains friends and ogres.
+// The even elements are ogres, but the odds are friends.
+var everybody = ['Yetu', 'Tabitha', 'Rasha', 'Max', 'Yazul',  'Todd'];
+var enemyIndex = 0;
+
+while (enemyIndex < everybody.length) {
+    // Use square brackets to get the ogre name from the array.
+    var enemy = everybody[enemyIndex];
+    // Attack using the variable holding the ogre name.
+
+    // Increment by 2 to skip over friends.
+    enemyIndex += 2;
+    hero.attack(enemy);
+}
+
+// After defeating ogres, move to the oasis.
+hero.moveXY(36, 54);
