@@ -1,0 +1,32 @@
+// The smaller ogres here do more damage!
+// Attack the ogres with the least health first.
+while (true) {
+    var weakest = null;
+    var leastHealth = 99999;
+    var enemyIndex = 0;
+    var enemies = hero.findEnemies();
+
+    // Loop through all enemies.
+    
+        // If an enemy's health is less than leastHealth,
+
+            // make it the weakest and set leastHealth to its health.
+while(enemyIndex < enemies.length ){
+    
+    if(enemies[enemyIndex].health < leastHealth){
+        leastHealth = enemies[enemyIndex].health;
+        weakest = enemies[enemyIndex];
+        }
+        enemyIndex+=1;
+    }
+
+
+
+
+
+    if (weakest) {
+        hero.attack(weakest);
+        // Attack the weakest ogre.
+        
+    }
+}
